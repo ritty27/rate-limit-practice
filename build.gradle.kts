@@ -16,10 +16,22 @@ repositories {
 }
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-web")
-	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	implementation("org.jetbrains.kotlin:kotlin-reflect")
+	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+
+	// spring web
+	implementation("org.springframework.boot:spring-boot-starter-web")
+
+	// redisson, bucket4j
+	implementation("org.redisson:redisson-spring-boot-starter:3.17.0")
+	implementation("com.giffing.bucket4j.spring.boot.starter:bucket4j-spring-boot-starter:0.5.2")
+
+
+	// logger
+	implementation("io.github.microutils:kotlin-logging:2.1.21")
+
+	// test
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
